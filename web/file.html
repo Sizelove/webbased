@@ -1,0 +1,52 @@
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+	echo "this is being echoed";
+   		$welcomemessage = '<li><a href="signout.html">Sign Out</a></li>';
+    }else{
+    	$welcomemessage = '<li><a href="signout.html">Log In</a></li>';
+    }
+    echo $welcomemessage;
+?>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+<nav id = "navbar"; style="box-shadow: 0px 2px 2px #999">
+		<ul class = "fl_right">
+			
+			<li style="float:left"><a href="#">Expense Manager</a></li>
+			<?php echo $welcomemessage ?>
+			<li><a href="link3.html">Link Text3</a></li>
+			<li><a class="active" href="link2.html">File Upload</a></li>
+			<li><a href="link1.php">Expense Manager</a></li>
+			<li ><a href="index.html">Home</a></li>
+		</ul>
+</nav>
+
+
+<p>To upload a file, use the format shown below, make sure you save in .csv!:</p>
+	<button>Show File</button>
+
+<p>Alternatively, download our template below and fill in your information:</p>
+<button>Download File</button>
+
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+<div>
+	<p>
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <p>
+    <input type="submit" value="Upload Image" name="submit">
+    </p>
+	</p>
+</div>
+</form>
+
+</body>
+</html>

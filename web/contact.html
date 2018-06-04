@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<?php
+session_start();
+include 'saveload.php';
+include 'comparison.php';
+if(isset($_SESSION['username'])){
+      $welcomemessage = '<li><a href="signout.php">Sign Out</a></li>';
+    }else{
+      $welcomemessage = '<li><a href="Tabbed.php">Log In</a></li>';
+    }
+?>
+
+<html>
+<nav id = "navbar"; style="box-shadow: 0px 2px 2px #999">
+    <ul class = "fl_right">
+      
+      <li style="float:left"><a href="#">Expense Manager</a></li>
+      
+      <?php echo $welcomemessage ?>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="file.php">File Upload</a></li>
+      <li><a class="active" href="link1.php">Expense Manager</a></li>
+      <li ><a href="home.html">Home</a></li>
+    </ul>
+  </nav>
+  <head>s
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+<body>
+
+<!-- Form fillup. -->
+ <div id="contactform" >
+     <h3>Contact Form</h3>
+   <form action="https://docs.google.com/forms/d/e/1FAIpQLSeNJE1ZzeXJIngZzO_dEZCucVX3uauwGBjKLhm3P1J7MMuGug/formResponse">
+    
+    <div class="input-container">
+      <label> Name:
+        <input  class="input-field" name="entry.1857275930" type="text" placeholder="Name"  autofocus  />
+      </label>
+    </div>
+       
+        <div class="input-container">
+      <label> Email:
+        <input  class="input-field" name="emailAddress" type="email" placeholder="email@domail.com"   />
+      </label>
+    </div>
+   
+    
+  <div class="input-container">
+    <label> Feedback:
+      <textarea  class="input-field" name="entry.2090356773" rows=10 cols=18 placeholder="Please let us know if there are any bugs or you want certain feature to be added." required></textarea>
+        </label> 
+    </div>
+     
+     
+   
+      <button type="submit" class="btn">Submit</button>
+       <button type="reset" class="btn">Clear</button>
+    
+   
+  
+     </form>
+    </div>
+  </body>
+</html>
+  

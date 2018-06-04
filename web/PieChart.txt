@@ -1,0 +1,47 @@
+function drawPie(canvas, i, number, total){
+    var colorarr = ['#AB9FBA', '#a4e2da', '#F0DAEC', '#a4e0a0', '#eeb7b6', '#D6C9E0', '#8AB9C8', '#C6DDB0', '#C68490']
+    var lettervec = "ABCDEFGHI";
+    arcvalold = 0;
+    canvase = canvas
+    context = canvase.getContext("2d");
+    for(count = 0; count < number; count++){
+        arcvalold = arcval
+        canvase = newdivers;
+        val = ((2*Math.PI)*globalValMatrix[i-1][count])/total
+        val2 = (globalValMatrix[i-1][count]/total)*100
+        rad = Math.min(canvase.width/2, canvase.height/2)
+
+        arcval += val
+        drawPieSlice(ctx, 150, 150, 150, arcvalold, arcval, colorarr[count])
+        var labelX = (canvase.width/2 + (rad / 2) * Math.cos((arcvalold + arcval)/2));
+        var labelY = (canvase.height/2 + (rad / 2) * Math.sin((arcvalold + arcval)/2));
+
+        val3 = val2.toFixed(1)
+        context.fillStyle = "white";
+        context.font = "bold 12px Arial";
+        context.fillText(lettervec[count] + " " + val3 + '%', labelX,labelY);
+    }
+ }
+
+
+function drawLine(ctx, startX, startY, endX, endY){
+    ctx.beginPath();
+    ctx.moveTo(startX,startY);
+    ctx.lineTo(endX,endY);
+    ctx.stroke();
+}
+
+function drawArc(ctx, centerX, centerY, radius, startAngle, endAngle){
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+    ctx.stroke();
+}
+
+function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color ){
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(centerX,centerY);
+    ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+    ctx.closePath();
+    ctx.fill();
+}

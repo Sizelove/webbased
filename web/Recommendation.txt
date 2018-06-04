@@ -1,0 +1,5 @@
+Utsav Phunyal -> A, significant contributions to  CSS/HTML design as well as input on types of functionalities and coding methods
+C.J. Edwards -> B, many contributions to HTML/CSS, present when needed but had difficulties being available towards the end of project,
+		leaving Utsav and I to cover many issues with the style coding nearing completion. 
+Khuong Nguyen -> B, many design contributions, but failed to make broader contributions. Ability to code left something to be desired,
+		 but made up for this on style/theme input. 
